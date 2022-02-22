@@ -82,26 +82,26 @@ class ViewController: UIViewController {
         
         settings.append(Section(options: [
             .switchCell(setting: SettingsSwitchOption(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange, isOn: true)),
-            .basicCell(setting: SettingsOption(title: "Wi-Fi", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemBlue)),
+            .basicCell(setting: SettingsOption(title: "Wi-Fi", icon: UIImage(systemName: "wifi"), iconBackgroundColor: .systemBlue)),
             .basicCell(setting: SettingsOption(title: "Bluetooth", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemBlue)),
-            .basicCell(setting: SettingsOption(title: "Сотовая связь", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen)),
-            .basicCell(setting: SettingsOption(title: "Режим модема", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen)),
-            .switchCell(setting: SettingsSwitchOption(title: "VPN", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange, isOn: true))
+            .basicCell(setting: SettingsOption(title: "Сотовая связь", icon: UIImage(systemName: "antenna.radiowaves.left.and.right"), iconBackgroundColor: .systemGreen)),
+            .basicCell(setting: SettingsOption(title: "Режим модема", icon: UIImage(systemName: "personalhotspot"), iconBackgroundColor: .systemGreen)),
+            .switchCell(setting: SettingsSwitchOption(title: "VPN", icon: UIImage(systemName: "eye.slash.fill"), iconBackgroundColor: .systemOrange, isOn: true))
             ]))
         settings.append(Section(options: [
-            .basicCell(setting: SettingsOption(title: "Уведомления", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemRed)),
-            .basicCell(setting: SettingsOption(title: "Звуки, тактильные сигналы", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemRed)),
-            .basicCell(setting: SettingsOption(title: "Фокусирование", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemPurple)),
-            .basicCell(setting: SettingsOption(title: "Экранное время", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemPurple)),
+            .basicCell(setting: SettingsOption(title: "Уведомления", icon: UIImage(systemName: "bell.badge.fill"), iconBackgroundColor: .systemRed)),
+            .basicCell(setting: SettingsOption(title: "Звуки, тактильные сигналы", icon: UIImage(systemName: "speaker.wave.3.fill"), iconBackgroundColor: .systemRed)),
+            .basicCell(setting: SettingsOption(title: "Фокусирование", icon: UIImage(systemName: "moon.fill"), iconBackgroundColor: .systemIndigo)),
+            .basicCell(setting: SettingsOption(title: "Экранное время", icon: UIImage(systemName: "hourglass"), iconBackgroundColor: .systemIndigo)),
             ]))
         settings.append(Section(options: [
-            .basicCell(setting: SettingsOption(title: "Основные", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGray)),
-            .basicCell(setting: SettingsOption(title: "Пункт управления", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGray)),
-            .basicCell(setting: SettingsOption(title: "Экран и яркость", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemBlue)),
-            .basicCell(setting: SettingsOption(title: "Универсальный доступ", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemBlue)),
-            .basicCell(setting: SettingsOption(title: "Аккумулятор", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen)),
-            .basicCell(setting: SettingsOption(title: "Обои", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen)),
-            .basicCell(setting: SettingsOption(title: "Конфиденциальность", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemBlue))
+            .basicCell(setting: SettingsOption(title: "Основные", icon: UIImage(systemName: "gear"), iconBackgroundColor: .systemGray)),
+            .basicCell(setting: SettingsOption(title: "Пункт управления", icon: UIImage(systemName: "brain"), iconBackgroundColor: .systemGray)),
+            .basicCell(setting: SettingsOption(title: "Экран и яркость", icon: UIImage(systemName: "textformat.size"), iconBackgroundColor: .systemBlue)),
+            .basicCell(setting: SettingsOption(title: "Универсальный доступ", icon: UIImage(systemName: "camera.filters"), iconBackgroundColor: .systemBlue)),
+            .basicCell(setting: SettingsOption(title: "Аккумулятор", icon: UIImage(systemName: "battery.100"), iconBackgroundColor: .systemGreen)),
+            .basicCell(setting: SettingsOption(title: "Face ID и код-пароль", icon: UIImage(systemName: "faceid"), iconBackgroundColor: .systemGreen)),
+            .basicCell(setting: SettingsOption(title: "Конфиденциальность", icon: UIImage(systemName: "hand.raised.fill"), iconBackgroundColor: .systemBlue))
             ]))
     }
 
