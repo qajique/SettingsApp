@@ -13,6 +13,7 @@
 		9B99ADC327C4D82300006E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B99ADC227C4D82300006E89 /* Assets.xcassets */; };
 		9B99ADC627C4D82300006E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B99ADC427C4D82300006E89 /* LaunchScreen.storyboard */; };
 		9B99ADCE27C4F46D00006E89 /* DisclosureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99ADCD27C4F46D00006E89 /* DisclosureCell.swift */; };
+		9B99ADD027C52F5000006E89 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99ADCF27C52F5000006E89 /* SwitchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9B99ADC527C4D82300006E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B99ADC727C4D82300006E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B99ADCD27C4F46D00006E89 /* DisclosureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureCell.swift; sourceTree = "<group>"; };
+		9B99ADCF27C52F5000006E89 /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				9B99ADC427C4D82300006E89 /* LaunchScreen.storyboard */,
 				9B99ADC727C4D82300006E89 /* Info.plist */,
 				9B99ADCD27C4F46D00006E89 /* DisclosureCell.swift */,
+				9B99ADCF27C52F5000006E89 /* SwitchCell.swift */,
 			);
 			path = SettingsApp;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B99ADBE27C4D81F00006E89 /* ViewController.swift in Sources */,
+				9B99ADD027C52F5000006E89 /* SwitchCell.swift in Sources */,
 				9B99ADBA27C4D81F00006E89 /* AppDelegate.swift in Sources */,
 				9B99ADCE27C4F46D00006E89 /* DisclosureCell.swift in Sources */,
 			);
