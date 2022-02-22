@@ -11,6 +11,7 @@ struct SettingsOption {
     let title: String
     let icon: UIImage?
     let iconBackgroundColor: UIColor
+    var handler: (() -> Void)
 }
 
 struct Section {
@@ -96,5 +97,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setupCell(with: setting)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let setting = settings[indexPath.section].options[indexPath.row]
+        setting.handler()
+    }
 }
 
+extension SettingsOption {
+    init(title: String, icon: UIImage?, iconBackgroundColor: UIColor) {
+        self.title = title
+        self.icon = icon
+        self.iconBackgroundColor = iconBackgroundColor
+        handler = { print("Нажата ячейка \(title)")}
+    }
+}
