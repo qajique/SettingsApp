@@ -17,13 +17,11 @@ struct Section {
     let options: [SettingsOption]
 }
 
-private let reuseIdentifier = "SettingsCell"
-
 class ViewController: UIViewController {
 
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        table.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        table.register(DisclosureCell.self, forCellReuseIdentifier: DisclosureCell.identifier)
         return table
     }()
 
@@ -47,7 +45,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
-
+        
         settings.append(Section(options: [
                 SettingsOption(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange),
                 SettingsOption(title: "Wi-Fi", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemBlue),
@@ -74,7 +72,6 @@ class ViewController: UIViewController {
     }
 
     func setupLayouts() {
-
     }
 }
 
@@ -89,8 +86,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.textLabel?.text = settings[indexPath.section].options[indexPath.row].title
+        let setting = settings[indexPath.section].options[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: DisclosureCell.identifier,
+            for: indexPath
+        ) as? DisclosureCell else {
+            return UITableViewCell( )
+        }
+        cell.setupCell(with: setting)
         return cell
     }
 }
