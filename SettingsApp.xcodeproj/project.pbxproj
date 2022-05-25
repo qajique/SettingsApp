@@ -14,6 +14,7 @@
 		9B99ADC627C4D82300006E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B99ADC427C4D82300006E89 /* LaunchScreen.storyboard */; };
 		9B99ADCE27C4F46D00006E89 /* DisclosureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99ADCD27C4F46D00006E89 /* DisclosureCell.swift */; };
 		9B99ADD027C52F5000006E89 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99ADCF27C52F5000006E89 /* SwitchCell.swift */; };
+		9BA0F961283EA62C00F9CA08 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA0F960283EA62C00F9CA08 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B99ADC727C4D82300006E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B99ADCD27C4F46D00006E89 /* DisclosureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureCell.swift; sourceTree = "<group>"; };
 		9B99ADCF27C52F5000006E89 /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		9BA0F960283EA62C00F9CA08 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9B99ADC727C4D82300006E89 /* Info.plist */,
 				9B99ADCD27C4F46D00006E89 /* DisclosureCell.swift */,
 				9B99ADCF27C52F5000006E89 /* SwitchCell.swift */,
+				9BA0F960283EA62C00F9CA08 /* Extensions.swift */,
 			);
 			path = SettingsApp;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA0F961283EA62C00F9CA08 /* Extensions.swift in Sources */,
 				9B99ADBE27C4D81F00006E89 /* ViewController.swift in Sources */,
 				9B99ADD027C52F5000006E89 /* SwitchCell.swift in Sources */,
 				9B99ADBA27C4D81F00006E89 /* AppDelegate.swift in Sources */,

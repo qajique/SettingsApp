@@ -52,7 +52,7 @@ enum SettingsOptionType {
 
 class ViewController: UIViewController {
 
-    private let tableView: UITableView = {
+    let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(DisclosureCell.self, forCellReuseIdentifier: DisclosureCell.identifier)
         table.register(SwitchCell.self, forCellReuseIdentifier: SwitchCell.identifier)
@@ -81,12 +81,12 @@ class ViewController: UIViewController {
         tableView.frame = view.bounds
         
         settings.append(Section(options: [
-            .switchCell(setting: SettingsSwitchOption(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange, isOn: true)),
+            .switchCell(setting: SettingsSwitchOption(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange, isOn: false)),
             .basicCell(setting: SettingsOption(title: "Wi-Fi", icon: UIImage(systemName: "wifi"), iconBackgroundColor: .systemBlue)),
             .basicCell(setting: SettingsOption(title: "Bluetooth", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemBlue)),
             .basicCell(setting: SettingsOption(title: "Сотовая связь", icon: UIImage(systemName: "antenna.radiowaves.left.and.right"), iconBackgroundColor: .systemGreen)),
             .basicCell(setting: SettingsOption(title: "Режим модема", icon: UIImage(systemName: "personalhotspot"), iconBackgroundColor: .systemGreen)),
-            .switchCell(setting: SettingsSwitchOption(title: "VPN", icon: UIImage(systemName: "eye.slash.fill"), iconBackgroundColor: .systemOrange, isOn: true))
+            .switchCell(setting: SettingsSwitchOption(title: "VPN", icon: UIImage(systemName: "eye.slash.fill"), iconBackgroundColor: .systemOrange, isOn: false))
             ]))
         settings.append(Section(options: [
             .basicCell(setting: SettingsOption(title: "Уведомления", icon: UIImage(systemName: "bell.badge.fill"), iconBackgroundColor: .systemRed)),
@@ -106,53 +106,6 @@ class ViewController: UIViewController {
     }
 
     func setupLayouts() {
-    }
-}
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return settings.count
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settings[section].options.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let setting = settings[indexPath.section].options[indexPath.row]
-
-        switch setting.self {
-        case .basicCell(let setting):
-            guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: DisclosureCell.identifier,
-                for: indexPath
-            ) as? DisclosureCell else {
-                return UITableViewCell( )
-            }
-            cell.setupCell(with: setting)
-            return cell
-        case .switchCell(let setting):
-            guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: SwitchCell.identifier,
-                for: indexPath
-            ) as? SwitchCell else {
-                return UITableViewCell( )
-            }
-            cell.setupCell(with: setting)
-            return cell
-        }
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let type = settings[indexPath.section].options[indexPath.row]
-        switch type.self {
-        case .basicCell(let setting):
-            setting.handler()
-        case .switchCell(let setting):
-            setting.handler()
-        }
     }
 }
 
